@@ -1,0 +1,55 @@
+<html>
+  <body>
+    <title>Luz de Araujo and de Campos, Topic Modelling Brazilian Supreme Court Lawsuits, JURIX 2020</title>
+    <h1 id="topic-modelling-brazilian-supreme-court-lawsuits">Topic Modelling Brazilian Supreme Court Lawsuits</h1>
+    <p>This repo holds the source code for the work described in the paper below:</p>
+    <ul>
+      <li><a href="http://lattes.cnpq.br/8374005378743328">Pedro H. Luz de Araujo</a> and <a
+											     href="http://www.cic.unb.br/~teodecampos/">Teo de Campos</a><br><a
+																				       href="http://ebooks.iospress.nl/volumearticle/56168">Topic Modelling Brazilian Supreme Court
+          Lawsuits</a><br><a href="https://jurix2020.law.muni.cz/">33rd International Conference on Legal Knowledge
+          and Information Systems​ (JURIX 2020), held online in December 9-11, 2020</a>.</li>
+    </ul>
+    <pre><code>@InProceedings{luz_etal_jurix2020,
+      author = {Pedro H. {Luz de Araujo} and Te\'{o}filo E. {de Campos}},
+      title = {Topic Modelling Brazilian Supreme Court Lawsuits},
+      booktitle = {International Conference on Legal Knowledge and Information Systems​ ({JURIX})},
+      publisher = {IOS Press},
+      series = {Frontiers in Artificial Intelligence and Applications},
+      pages = {113--122},
+      year = {2020},
+      month = {December 9-11},
+      address = {Prague, Czech Republic},      
+      doi = {10.3233/FAIA200855},
+      url = {http://ebooks.iospress.nl/volumearticle/56168},
+}
+</code></pre>
+    <p>The code is available at <a target="_blank" href="https://github.com/peluz/stf-topic-model">this repo</a>. The presentation slides
+      are available <a href="presentation.pdf">here</a>.</p>
+    <p>The sections below describe the requirements and the files.</p>
+    <p>We kindly request that users cite our paper in any publication that is generated as a result of the use of our work.
+    </p>
+    <h2 id="requirements">Requirements</h2>
+    <ol>
+      <li><a href="https://www.python.org/downloads/">Python 3.6</a> </li>
+      <li><a href="https://pypi.org/project/gensim/">Gensim</a></li>
+      <li><a href="https://pypi.org/project/pyLDAvis/">pyLDAvis</a></li>
+      <li><a href="https://pandas.pydata.org/">Pandas</a></li>
+      <li><a href="https://scikit-learn.org/stable/">Scikir-learn</a></li>
+      <li><a href="https://xgboost.readthedocs.io/en/latest/">XGBoost</a></li>
+    </ol>
+    <h2 id="files">Files</h2>
+    <ul>
+      <li><a href="lda_explore.ipynb">lda_explore.ipynb</a>: notebook for topic model training</li>
+      <li><a href="train_xgboost_tfidf.ipynb">train_xgboost_tfidf.ipynb</a>: notebook for classifier training using tfidf values or word counts.</li>
+      <li><a href="train_xgboost_topics.ipynb">train_xgboost_topics.ipynb</a>: notebook for classifier training using topic distribution.</li>
+    </ul>
+    <p>Please follow this link to fill in a consent form and get our dataset: <a href="http://ailab.unb.br/victor/lrec2020" target="_blank">http://ailab.unb.br/victor/lrec2020</a></p>
+    <hr>
+    <address><a href="https://cic.unb.br/~teodecampos">teodecampos</a></address>
+    <!-- Created: March 2020 -->
+    <!-- hhmts start -->
+    Last modified: 26 January 2021
+    <!-- hhmts end -->    
+  </body>  
+</html>

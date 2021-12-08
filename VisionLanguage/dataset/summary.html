@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+
+    <title>Using Images as Context in SMT</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+<!--              <h3 class="masthead-brand">Images as Context in SMT</h3> -->
+              <ul class="nav masthead-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="#">Summary</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="dataset.html">Dataset</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <p class="text-justify lead">Using Images as Context in Statistical Machine Translation</p>
+            <br/>
+            <p class="text-justify ">In this project we investigate whether information from images can be helpful as context for statistical machine translation (SMT). We target two well-known challenges in SMT, particularly when it is used to translate short texts: ambiguity (incorrect translation of words that have multiple senses) and out-of-vocabulary words (words left untranslated). In order to do so, we automatically built a dataset containing:</p>
+
+<ul class=" text-justify">
+    <li>Images from Wikipedia</li>
+    <li>Image captions in English</li>
+    <li>The machine translations of the captions into Portuguese, Spanish, German or French</li>
+    <li>A human (reference) translation as found in Wikipedia for each English caption</li>
+    <li>A similar image retrieved from ImageNet using basic computer vision methods</li>
+    <li>Keywords from the WordNet synset associated with the retrieved image</li>
+</ul>
+<br/><br/>
+<p class="text-justify">In order to understand whether exploiting each of these sources of information is worthwhile, we will collect human judgements on a sample of this dataset. </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+ -->
+  </body>
+</html>

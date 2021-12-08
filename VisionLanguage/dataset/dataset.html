@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+
+    <title>Using Images as Context in SMT</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+<!--               <h3 class="masthead-brand">Images as Context in SMT</h3> -->
+              <ul class="nav masthead-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="summary.html">Summary</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li class="active"><a href="#">Dataset</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <p class="text-justify lead">Dataset</p>
+            <br/><br/><br/>
+
+            <p class="text-justify">We have chosen to split the dataset in two gzipped files. You can download the images from Wikipedia by using the "Images" links above and all the textual part by clicking on the "Text" links.</p>
+            <p class="text-justify">First, the dataset consists of:</p>
+            <ul class="text-justify">
+              <li>images from Wikipedia;</li>
+              <li>captions created by humans in the English language;</li>
+              <li>captions created by humans in at least one of the following languages: Portuguese, Spanish, French or German;</li>
+              <li>automatic translations of these captions, from English into at least one of the four languages mentioned above;</li>
+              <li>the URL of an ImageNet image obtained by means of the application of a bag-of-visual-words method (on Wikipedia's and ImageNet's images), selecting the closest image in ImageNet to each of the Wikipedia's images.</li>
+            </ul>
+            <p class="text-justify">The textual part of this dataset consists of the following files:</p>
+            <dl class="text-justify">
+              <dt>metadata.final.file-found</dt><dd>local path to the Wikipedia image</dd>
+              <dt>reference.final.file-found</dt><dd>Wikipedia image caption in the reference language</dd>
+              <dt>source.final.file-found</dt><dd>Wikipedia image caption in the source language, i.e. English</dd>
+              <dt>automatic-translation.final.file-found</dt><dd>Wikipedia image caption in the reference language, obtained by machine translation of the source caption</dd>
+              <dt>imagenet.final.file-found</dt><dd>path to the ImageNet image entry online</dd>
+            </dl>
+            <p class="text-justify">The five files described above contain information for one sentence (image caption) per line.</p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+ -->
+  </body>
+</html>

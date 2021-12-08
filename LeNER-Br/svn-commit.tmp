@@ -1,0 +1,14 @@
+
+--This line, and those below, will be ignored--
+
+R    model/LICENSE.txt
+R    model/build_data.py
+R    model/classScores.py
+R    model/data
+R    model/evaluate.py
+R    model/evaluateSentence.py
+R    model/evaluateText.py
+R    model/model
+R    model/requirements.txt
+R    model/results
+R    model/train.py

@@ -1,0 +1,83 @@
+<html>
+  <title>Victor dataset, Luz et al. LREC 2020</title>
+  <body>
+
+    <h1 id="victor-a-dataset-for-brazilian-legal-documents-classification">Victor: a dataset for Brazilian legal documents classification</h1>
+    <p>This page holds the source code and data described in the paper below:</p>
+    <p>
+      <a href="https://cic.unb.br/~teodecampos/peluz/">Pedro H. Luz de Araujo</a>, <a href="https://cic.unb.br/~teodecampos/">Te&oacute;filo E. de Campos</a>, <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4765736Y3">Fabricio Ataides Braz</a>, <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4779693P1">Nilton Correia da Silva</a><BR />
+      <em>Victor: a dataset for Brazilian legal documents classification</em><br><a href="https://lrec2020.lrec-conf.org/en/">Language Resources and Evaluation Conference (LREC), May, Marseille, France, 2020.</a><br/>
+      [ <a href="luz_etal_lrec2020.pdf">pdf</a> | <a href="luz_etal_victor_lrec2020.bib" target="_blank">bib</a> ]
+    </p>
+    <p>We kindly request that users cite our paper in any publication that is generated as a result of the use of our code or our dataset. </p>
+    <p>Relevant links:
+      <ul>
+	<li> <a href="https://www.aclweb.org/anthology/2020.lrec-1.181/" target="_blank">Our paper at the ACLWeb page</a></li>
+	<li> <a href="https://paperswithcode.com/paper/victor-a-dataset-for-brazilian-legal-1" target="_blank"> Our entry at Papers With Code</a></li>
+      </ul>
+    </p>
+
+    <h2>Dataset</h2>    
+    <p>We make available the <I>Medium (MVic)</I> and <I>Small (SVic)</I> versions of <I>Victor</I>. We are at the present time unfortunately unable to distribute <I>Big Victor (BVic)</I>.</p>
+    <p>These are the sizes of each part of the dataset (uncompressed):
+      <ul>
+	<li>SmallVictor text (CSV files)
+	  <ul>
+	    <li>train: 216.7 MB</li>
+	    <li>val: 137.8 MB</li>
+	    <li>test: 139.0 MB </li>
+	  </ul>
+	</li>
+	<li>SmallVictor images (PDF files)
+	  <ul>
+	    <li>train: 5.4 GB</li>
+	    <li>val: 3.6 GB </li>
+	    <li>test: 3.5 GB </li>
+	  </ul>
+	</li>
+	<li>MediumVictor text (CSV files)
+	  <ul>
+	    <li>train: 2.0 GB</li>
+	    <li>val: 422.6 MB</li>
+	    <li>test: 418.7 MB </li>
+	  </ul>
+	</li>
+      </ul>
+    </p>
+    <p>Please follow this link to fill in a consent form and get our dataset: <a href="http://ailab.unb.br/victor/lrec2020" target="_blank">http://ailab.unb.br/victor/lrec2020</a></p>
+    <p>Once ou fill in the form, you will first get a confirmation email with the information you provided and up to 48hs later you will get another email with the URL where you can download the data from.</p>
+    
+    <h2>Source code</h2>
+    <p>Our code was developed in Python 3, using TensorFlow and Keras.
+      Below are resources that should enable users to reproduce our results.</p>
+    <h3 id="requirements">Requirements</h3>
+    <ul>
+      <li><a target="_blank" href="https://www.python.org/downloads/">Python 3</a></li>
+      <li><a target="_blank" href="https://pandas.pydata.org/">pandas</a></li>
+      <li><a target="_blank" href="https://matplotlib.org/">matplotlib</a></li>
+      <li><a target="_blank" href="https://scikit-learn.org/stable/install.html">scikit-learn</a></li>
+      <li><a target="_blank" href="https://xgboost.readthedocs.io/en/latest/">XGBoost</a></li>
+      <li><a target="_blank" href="https://sklearn-crfsuite.readthedocs.io/en/latest/">sklearn-crfsuite</a></li>
+      <li><a target="_blank" href="https://keras.io/">keras</a></li>
+      <li><a target="_blank" href="https://www.tensorflow.org/">tensorflow</a></li>
+    </ul>
+    <h3 id="files">Source files</h3>
+    <ul>
+      <li><a href="shallow_clf_docType.ipynb">shallow_clf_docType.ipynb</a>: notebook to train the shallow classifiers for document type prediction</li>
+      <li><a href="baseline_clf_themes.ipynb">baseline_clf_themes.ipynb</a>: notebook to train baseline classifiers for theme prediction</li>
+      <li><a href="dataset_statistics.ipynb">dataset_statistics.ipynb</a>: notebook to compute dataset statistics</li>
+      <li><a href="get_preds.py">get_preds.py</a>: script to compute and save model predictions (to use in the CRF experiments)</li>
+      <li><a href="crf_experiments.ipynb">crf_experiments.ipynb</a>: notebook for CRF post-processing for document type classification</li>
+      <li><a href="train_cnn.py">train_cnn.py</a> script to train CNN for document type classification</li>
+      <li><a href="train_lstm.py">train_lstm.py</a> script to train LSTM for document type classification</li>
+      <li><a href="train_xgboost_themes.py">train_xgboost_themes.py</a> script to train XGBoost for theme classification</li>
+    </ul>
+
+    <hr>
+    <address><a href="https://cic.unb.br/~teodecampos">teodecampos</a></address>
+    <!-- Created: March 2020 -->
+    <!-- hhmts start -->
+    Last modified: 13 August 2020
+    <!-- hhmts end -->
+  </body>
+</html>

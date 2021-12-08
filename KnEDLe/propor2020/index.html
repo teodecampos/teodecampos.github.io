@@ -1,0 +1,103 @@
+<html>
+  <title>DODF dataset paper, Luz et al., SVM vs ULMFiT, PROPOR 2020</title>
+  <body>
+    <h1 id="inferring-the-source-of-official-texts-can-svm-beat-ulmfit-">Inferring the source of official texts: can SVM beat ULMFiT?</h1>
+    <p>This page holds the dataset and source code described in the paper below:</p>
+    <p>
+<a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&amp;id=K2742607J6">Pedro H. Luz de Araujo</a>, <a href="https://cic.unb.br/~teodecampos/">Te&oacute;filo E. de Campos</a>, Marcelo M. Silva de Sousa. <BR />
+	<em>Inferring the source of official texts: can SVM beat ULMFiT?</em><BR />
+	<a href="https://propor.di.uevora.pt/" target="_blank">International Conference on the Computational Processing of Portuguese (PROPOR), March 2-4, &Eacute;vora, Portugal, 2020</a>.<BR />
+	Download: [
+	<a href="luz_de_araujo_etal_propor2020.pdf" target="_blank">paper</a> |
+	<a href="luz_de_araujo_etal_propor2020.bib" target="_blank">bib</a> |
+	<a href="luz_de_araujo_etal_propor2020.zip" target="_blank">code and dataset</a> ]</P>
+    <P>
+	See also <a href="#update">new results and pre-trained model at the bottom of this page</a>.
+    </P>
+    <p>We kindly request that users cite our paper above if any publication that is generated as a result of the use of our code or our dataset.</p>
+    <H2>Presentations</H2>
+	<UL>
+	  <LI><a href="luz_de_araujo_etal_propor2020_slides.pdf" target="_blank">Long version, presented in internal meeting</a>, February 2020</LI>
+	  <LI> <a href="luz_de_araujo_etal_propor2020_slides2.pdf" target="_blank">PROPOR presentation</a>, March 2020</LI>
+	  <LI> <a href="luz_de_araujo_etal_propor2020_slides_knedle.pdf" target="_blank">Workshop KnEDLe release 1</a>, July de 2020, in Portuguese - video below: <BR />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q1bZIpFc5PY?start=1505" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  </LI>
+	</UL>
+	
+    <h2 id="resources">Resources</h2>
+   
+    <p>We provide the data splits as csv files, the data after the preprocessing described in the paper as pickle files, the SentencePiece tokenizer model and vocabulary and the jupyter notebooks used. We describe the directory structure and individual files below. </p>
+    <p>Unfortunately, we are not able to upload the trained model files used in the paper, but <a href="#update">the "update" section at the end of this page has the resources needed to generate our latest results</a>.</p>
+    <p>
+      <U>Note</U>: this project is also listed at <a href="https://paperswithcode.com/paper/inferring-the-source-of-official-texts-can" target="_blank"> Papers With Code</a>, where you can access eventual updates of the resources of this project and see the latest results of our benchmark.
+    </p>
+    <h3 id="requirements">Requirements</h3>
+    <ul>
+      <li><a href="https://www.python.org/downloads/">Python 3</a></li>
+      <li><a href="https://pandas.pydata.org/">pandas</a></li>
+      <li><a href="https://matplotlib.org/">matplotlib</a></li>
+      <li><a href="https://docs.fast.ai/install.html">fastai</a></li>
+      <li><a href="https://scikit-learn.org/stable/install.html">scikit-learn</a></li>
+      <li><a href="https://github.com/piegu/language-models/tree/master/models">Pretrained language model</a></li>
+    </ul>
+    <h3 id="directory-structure">Directory Structure</h3>
+    The <a href="luz_de_araujo_etal_propor2020.zip" target="_blank">code and dataset can be obtained by clicking here</a>.
+    <ul>
+      <li>data:<ul>
+	  <li>data_clas_bwd.pkl: preprocessed data for backward classification</li>
+	  <li>data_clas_export.pkl: preprocessed data for forward classification</li>
+	  <li>data_lm_back.pkl: preprocessed data for backward language model</li>
+	  <li>data_lm_export.pkl: preprocessed data for forward language model</li>
+	  <li>test_data.pkl: preprocessed data for forward classification evaluation</li>
+	  <li>test_data_bwd.pkl: preprocessed data for backward classification evaluation</li>
+	  <li>clean:<ul>
+	      <li>train.csv: raw training + validation data (unsplit)</li>
+	      <li>train_val.csv: raw training + validation data (split)</li>
+	      <li>unsup:<ul>
+		  <li>unsup.csv: raw language model data</li>
+		</ul>
+	      </li>
+	    </ul>
+	  </li>
+	</ul>
+      </li>
+      <li>tmp:<ul>
+	  <li>spm.model: SentencePiece tokenizer model</li>
+	  <li>spm.vocab: SentencePiece vocabulary</li>
+	</ul>
+      </li>
+      <li>train_ulmfit.ipynb: preprocesses and saves the data, and trains  and evaluates <a href="https://arxiv.org/abs/1801.06146">ULMFiT</a> models</li>
+      <li>train_baseline.ipynb: trains and evaluates the BOW models</li>
+    </ul>
+    <h3 id="reproducing-results">Reproducing Results</h3>
+    <ul>
+      <li>Download the pretrained language model and place it in a model directory at the root</li>
+      <li>Run train_ulmfit.ipynb</li>
+      <li>Run train_baseline.ipynb</li>
+    </ul>
+
+    <a name="update" />
+    <h3>Update (27/05/20)</h3>
+    <p>The <a href="https://github.com/piegu/language-models/tree/master/models">pre-trained language model</a> used in this
+      work was not originally released with
+      its tokenizer model and vocabulary data, so our fine-tuned model and classifier were not able to leverage
+      subword embeddings trained on
+      general domain portuguese data.<BR />
+      This has been amended, so we re-ran all experiments
+      using the pre-trained vocab data.<BR />
+      We present the new results and resources in the links below:
+      <UL>
+	<LI><a target="_blank" href="luz_de_araujo_etal_propor2020_new_results.pdf">new results</a>;</LI>
+	<LI>updated source code to train ULMFiT, in two formats: <a target="_blank" href="train_ulmfit.ipynb">Jupyter notebook</a> and <a target="_blank" href="train_ulmfit.py">plain Python</a>;</LI>
+	<LI><a target="_blank" href="models.zip">updated trained models</a> (1.7GB);</LI>
+	<LI><a target="_blank" href="processed_data.zip">new pre-processed data</a>.</LI>
+      </UL>
+    </p>
+    <hr>
+    <address><a href="https://cic.unb.br/~teodecampos">teodecampos</a></address>
+    <!-- Created: March 2020 -->
+    <!-- hhmts start -->
+Last modified: Friday July 24 10:58 -03 2020
+    <!-- hhmts end -->
+  </body>
+</html>

@@ -1,0 +1,41 @@
+from nltk import word_tokenize
+from nltk.tokenize.punkt import PunktSentenceTokenizer, PunktParameters
+import sys
+import pickle
+
+assert sys.version_info >= (3, 0)
+
+if len(sys.argv) != 2:
+    sys.exit("Usage: textToConll.py <path/to/file>")
+else:
+    fileName = sys.argv[1]
+
+with open(fileName, 'r', encoding='UTF-8') as f:
+    text = f.read()
+
+punkt_param = PunktParameters()
+with open("./abbrev_list.pkl", "rb") as fp:
+    abbrev_list = pickle.load(fp)
+punkt_param.abbrev_types = set(abbrev_list)
+tokenizer = PunktSentenceTokenizer(punkt_param)
+tokenizer.train(text)
+print(tokenizer._params.abbrev_types)
+
+all_sentences = tokenizer.tokenize(text)
+
+seen = set()
+sentences = []
+for sentence in all_sentences:
+    if sentence not in seen:
+        seen.add(sentence)
+        sentences.append(sentence)
+
+
+output = fileName.rstrip('.txt') + '_temp.conll'
+
+with open(output, 'w', encoding='UTF-8') as f:
+    for sentence in sentences:
+        words = word_tokenize(sentence, language='portuguese')
+        for word in words:
+            f.write("{} O\n".format(word))
+        f.write("\n")
