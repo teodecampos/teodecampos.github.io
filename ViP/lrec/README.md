@@ -2,7 +2,7 @@
 
 This repo holds source code described in the paper below:
 
-* [Pedro H. Luz de Araujo](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K2742607J6), [Teófilo E. de Campos](https://cic.unb.br/~teodecampos/), [Fabricio Ataides Braz](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4765736Y3), [Nilton Correia da Silva](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4779693P1)
+* [Pedro H. Luz de Araujo](https://teodecampos.github.io/peluz), [Teófilo E. de Campos](https://teodecampos.github.io/~teodecampos/), [Fabricio Ataides Braz](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4765736Y3), [Nilton Correia da Silva](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4779693P1)
 _VICTOR: a Dataset for Brazilian Legal Documents Classification_  
 [Language Resources and Evaluation Conference (LREC), May, Marseille, France, 2020.](https://lrec2020.lrec-conf.org/en/)  
 Download: [ [paper](https://www.aclweb.org/anthology/2020.lrec-1.181.pdf) | [bib](https://www.aclweb.org/anthology/2020.lrec-1.181.bib) ]
