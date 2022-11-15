@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <title>The Chars74K image dataset - Character Recognition in Natural Images</title>
+  </head>
+
+  <body>
+<font face="Arial">
+    <table width="100%" border="0">
+	<td>
+	  <td align="left"><img src="chars74k.jpg"></td>
+	  <td align="left"><h1>The Chars74K dataset</h1>
+    <h2>Character Recognition in Natural Images</h2>
+	  </td>
+<!--	  <td align="right">
+	    <img width=133 alt="where this work was done"
+	      src="http://research.microsoft.com/a/i/c/logo_msr.png">
+	    <BR>
+	    <img width=133 alt="server infrastructure" src="http://www2.surrey.ac.uk/resources/Images/Common/h1UniversityOfSurrey.gif">
+	</tr> -->
+	</table>
+      <P><small> [ <a href="#download">jump to download</a> ] </small> </P>
+      <P>
+	Character recognition is a classic pattern recognition problem for
+	which researchers have worked since the early days of computer
+	vision. With today's omnipresence of cameras, the applications
+	of automatic character recognition are broader than ever. For
+	Latin script, this is largely considered a solved problem in
+	constrained situations, such as images of scanned documents
+	containing common character fonts and uniform
+	background. However, images obtained with popular cameras and
+	hand held devices still pose a formidable challenge for
+	character recognition. The challenging aspects of this problem
+	are evident in this dataset.
+      </P>
+      <P>
+	In this dataset, symbols used in both English and 
+	<a href="http://en.wikipedia.org/wiki/Kannada_script">Kannada</a>
+	are available. 
+      </P>
+      <P> 
+	In the <B>English</B> language, Latin script (excluding accents) and
+	Hindu-Arabic numerals are used. For simplicity we call this the
+	"English" characters set. Our dataset consists of:
+	<ul>
+	  <li>64 classes (0-9, A-Z, a-z)</li>
+          <li> 7705 characters obtained from natural images</li>
+          <li> 3410 hand drawn characters using a tablet PC </li>
+          <li> 62992 synthesised characters from computer fonts</li>
+	</ul>
+        This gives a total of over 74K images (which explains the name
+      of the dataset).
+      </P>
+      <P>
+	The compound symbols of <B>Kannada</B> were
+	treated as individual classes, meaning that a combination of a
+	consonant and a vowel leads to a third class in our dataset. 
+	Clearly this is not the ideal representation for this type of
+	script, as it leads to a very large number of
+	classes. However, we decided to use this representation for
+	our baseline evaluations present in [<a href="#reference">deCampos et al</a>] as a way
+	to evaluate a generic recognition method for this problem.
+      </P>
+<hr>
+
+    <H2><a name="reference">Reference</a></H2>
+    <P>The following paper gives further descriptions of this dataset and baseline
+	evaluations using a bag-of-visual-words approach with several
+	feature extraction methods and their combination using
+	multiple kernel learning:</P>
+    <P>
+    <a
+	  href="https://teodecampos.github.io">T. E. de Campos</a>, B. R. Babu and <a href="http://research.microsoft.com/~manik/">M. Varma</a>.
+    <b> <a href="decampos_etal_visapp2009.pdf">Character recognition in natural images</a>. </b>
+    In <i> Proceedings of the International Conference on Computer
+    Vision Theory and Applications (VISAPP), Lisbon, Portugal</i>, February 2009.
+    <br>
+    </a><a href="https://manikvarma.github.io/pubs/selfbib.html#deCampos09">Bibtex</a> | 
+    <a href="https://manikvarma.github.io/pubs/deCampos09-abstract.txt" target="_blank">Abstract</a> | 
+    <a href="decampos_etal_visapp2009.pdf">PDF</a>
+    </P>
+    <P>Follow <a href="https://scholar.google.com/scholar?oi=bibs&cites=8388314830483915080,17124159032929175576">this link for a list publications that have cited the above paper</a> and <a href="http://scholar.google.co.uk/scholar?q=chars74k">this link for papers that mention this dataset</a>.</P>
+<hr>
+<H2><a name="download">Download</a></H2>
+    <P>
+      <B>Disclaimer:</B> by downloading and using the datasets below (or part of them) you 
+      agree to acknowledge their source and cite the above paper in related publications.
+      We will be grateful if you contact us to let us know about the usage of the our datasets.
+    </P>
+
+    <UL>
+      <LI> Images of individual characters: the files below contain
+	  directory trees of each dataset of individual characters. In
+	  these trees, there is one directory per class of
+	  character. Each character sample appear in an individual PNG
+	  image. There's a large variation is scale, as we kept the
+	  original resolution of the characters as they appear in the
+	  original images.</LI> 
+      <UL>
+      <LI> English, 62 classes (0-9, A-Z, a-z)</LI>
+      <UL>
+      <LI> <a href="https://drive.google.com/drive/folders/113trgjTrveKJON5-v39ya9Ipjx6hMqg6?usp=sharing">EnglishImg.tgz</a> (127.9 MB) [<a
+	    href="Samples/english.png">sample characters</a>]:
+	  segmented characters from natural scenes. For
+	  each character, a binary segmentation mask file is also
+	  provided.</LI> 
+      <LI> <a href="https://drive.google.com/file/d/1FCH2jjo9Z1HbPVDWAEfvE3ZKaPpaXogg/view?usp=share_link">EnglishHnd.tgz</a> (13.0 MB) [<a
+	    href="Samples/hnd.png">sample characters</a>]:
+	  hand-drawn characters. 55 samples per class. The pen
+	  stroke trajectories are also provided, so this dataset can
+	  also be used to evaluate on-line handwritten character
+	  recognition methods.</LI> 
+      <LI> <a href="https://drive.google.com/file/d/1j3aQTIgmoYXycjBSNwAFQ68pChFY1AgV/view?usp=share_link">EnglishFnt.tgz</a> (51.1 MB): characters from computer fonts with 4 variations (combinations of <I>italic</I>, <B>bold</B> and normal). </LI>
+      </UL>
+    <LI> Kannada (657+ classes) </LI>
+    <UL>
+      <LI> <a href="https://drive.google.com/file/d/18RnvTkfbhNbg4FfzdZHR8PVuUACNH2HB/view?usp=share_link">KannadaImg.tgz</a> (105.8 MB) [<a href="Samples/kannada.png">sample characters</a>]:
+	  segmented characters from natural scenes. A copy of this dataset is available at the mldata.org repository, <a href="http://dx.doi.org/10.5881/CHARS74K-KANNADA-IMG">doi:10.5881/CHARS74K-KANNADA-IMG</a></LI>
+      <LI> <a href="https://drive.google.com/file/d/16iETdmk1J2jJ1FBMY7MC43FvQHL7q_FN/view?usp=share_link">KannadaHnd.tgz</a> (125.8 MB) [<a href="Samples/hnd.png">sample characters</a>]:
+	  hand-drawn characters. A copy of this dataset is available at the mldata.org repository, <a href="http://dx.doi.org/10.5881/CHARS74K-KANNADA-IMG">doi:10.5881/CHARS74K-KANNADA-HND</a></LI>
+      </UL>
+    </UL>
+      <LI> <a href="https://drive.google.com/file/d/1Gzioygh0hy2JWQASjucQ0slx_0IyieaP/view?usp=share_link">Lists.tgz</a> (7.3 MB): lists of files used for training and testing in our experiments (in MatLab data file format ".MAT"). <B>Please use these splits in order to make fair comparisons with the results published in the paper above</B>. 
+	<BR> Each file has a data structure "list" with these elements:
+	<UL>
+	  <LI> <U>ALLlabels</U>: class label for each sample</LI>
+	  <LI> <U>ALLnames</U>: sub-directory and name of the image for each sample</LI>
+	  <LI> <U>classlabels</U>: set of labels (classes) in this dataset, coded numerically, e.g. 10=A, 11=B, ..., 64=z</LI>
+	  <LI> <U>classnames</U>: scrings of the directories where samples of each class are stored</LI>
+	  <LI> <U>NUMclasses</U>: total number of classes in this dataset</LI>
+	  <LI> <U>TRNind</U>: indexes of the training samples. If 20 splits are used, this is a matrix of N_train_samples X 20</LI>
+	  <LI> <U>TSTind</U>: indexes of the test samples. If 20 splits are used, this is a matrix of N_test_samples X 20 </LI>
+	  <LI> <U>VALind</U>: indexes of the validation samples. If 20 splits are used, this is a matrix of N_validation_samples X 20 </LI>
+	  <LI> <U>TXNind</U>: indexes of the texton samples, i.e., samples used to build the vocabulary with the bag-of-visual-words method. If 20 splits are used, this is a matrix of N_texton_samples X 20 </LI>
+	</UL>
+</LI>
+      <LI> <a href="https://drive.google.com/file/d/1Tb7E73BVAe78jYfSYKWH7hF_RWN3dx5g/view?usp=share_link">ListsTXT.tgz</a> (2.8 MB): Same as
+      above, but in "M" format, i.e., you can load all the data by
+      running the M-files in this TGZ package (in MatLab). For those who don't have
+      MatLab: these files are human-readable ASCII files with all the
+      lists. </LI> 
+      
+<LI> <a
+      href="https://drive.google.com/file/d/1hsD_aHodA8bEljzEmfY0aLE2q1wRKSXN/view?usp=share_link">FullImagesAndAnnotations_Frontal.tgz</a>
+      (739.7 MB) [<a href="Samples/original_images.png">sample
+      images</a>]: original images and TXT files which give the
+      coordinates, bounding polygons and labels of characters that
+      appear in each image. Many whole words have also been annotated.
+      These annotations may be used to evaluate character/word
+      detection methods, but not all the words that appear in the
+      images have been annotated.</LI> <LI> <a
+      href="https://drive.google.com/file/d/1Gy8R50W1XtmSYc4GsESNkEttmHlxnORR/view?usp=share_link">Maps.tgz</a> (1.3 MB): inverse maps, points each
+      sample character in EnglishImg.tgz (or KannadaImg.tgz) to the
+      original full image in
+      FullImagesAndAnnotations_frontal.tgz. This file also contains maps from 
+      each character to its class number. For instance, the file <CODE>Maps/Kannada/Img/map.mat</CODE> 
+      contains a MatLab cell array of 990 elements. Each cell contains a Kannada character (in Unicode)
+      and its position in the array is the class number. So, given Kannada character (in a variable called <CODE>input</CODE>, 
+      to find its class number is you need to do <CODE> class_number = find(strcmp(input, map),1); </CODE>
+</LI>
+    </UL>
+
+<H3><a name="usage">Sample usage</a></H3>
+For experiments with <U>Chars74K-15</U>, i.e., train with 15 samples per class
+and test with other 15 samples per class for the images of "English" characters in the wild: 
+<OL>
+<LI>Download and unpack <a href="https://drive.google.com/file/d/1VNMJEvx9UJwzVi7IaNF2QfbMbAD90krX/view?usp=share_link">EnglishImg.tgz</a> and <a href="https://drive.google.com/file/d/1Tb7E73BVAe78jYfSYKWH7hF_RWN3dx5g/view?usp=share_link">ListsTXT.tgz</a></LI>
+<LI>In Octave (or MatLab), run <code>list_English_Img</code> to load the lists to the memory.</LI>
+<LI>The training set for this particular experiment will be indexed by <CODE>list.TRNind(:,end)</CODE> (so please copy the result of this to a variable), i.e., it is defined by the last split of training data.
+Note that <CODE>sum(list.TRNind(:,end)>0)/list.NUMclasses</CODE> results in 15, confirming that there are 15 training samples per class.</LI>
+<LI>The test set will be defined by <CODE>list.TSTind(:,end)</CODE> (Note that here the index <CODE>end</CODE> can be replaced by any valid number because the columns of <CODE>list.TSTind</CODE> are repetitions of the same list. This is because
+we have fixed the test set for all the experiments with 15 samples per class.)</LI>
+<LI>The class labels (ground truth) are obtained with <CODE>list.ALLlabels(list.TRNind(:,end))</CODE> for the training set and <CODE>list.ALLlabels(list.TSTind(:,end))</CODE>
+ for the test set. Again, note that for each class label, there should be 15 samples, i.e., <CODE>sum(list.ALLlabels(list.TSTind(:,end))==x)</CODE> results in 15 for <CODE>x=1:list.NUMclasses</CODE></LI>
+<LI>You can then proceed with your experiments by selecting training files following this: <CODE>list.ALLnames(list.TRNind(c,end),:)</CODE> for training and <CODE>list.ALLnames(list.TSTind(c,end),:)</CODE> for testing, where <CODE>c</CODE> is the index that iterates through the samples (from 1 to 930 in the case of this experiment, but it can be bound by class labels, depending on how you implement your experiment). Note that <CODE>list.ALLnames</CODE> does not include the file extension (png) and the absolute path of the images, you need to append these to the string.</LI>
+</OL>
+Note that the above can also be done for the validation and vocabulary lists if they are used in the same experiment (<CODE>list.VALind</CODE> and <CODE>list.TXNind</CODE>)
+
+    <hr>
+      <h3>Sample characters</h3>
+      <p>(In addition to the ones shown following the links above)</p>
+      <center><img src="Samples/confusing_english.png"></center>
+       <hr width=75%>
+      <center><img src="Samples/confusing_kannada.png"></center>
+       <hr width=75%>
+      <center><img src="Samples/masks.png"></center>
+    <hr>
+<small>
+<H2>Credits and Acknowledgements</a></H2>
+    <P>
+	This dataset and the experiments present in the paper were done at <a href="http://research.microsoft.com/india/">Microsoft
+	Research India</a> by <a
+	    href="https://teodecampos.github.io">T de Campos</a>, with the mentoring support from <a href="http://research.microsoft.com/~manik">M Varma</a>. Additional SVM and MKL experiments were performed by BR Babu. </P>
+	<P>We would like to acknowledge the help of several
+	  volunteers who annotated this dataset. 
+	  In particular, we would like to thank
+          Arun, Kavya, Ranjeetha, Riaz and Yuvraj. 
+	  We would
+	  also like to thank Richa Singh and Gopal Srinivasa for
+	  developing some of the tools for annotation (one of the
+	  tools used is described <a href="http://research.microsoft.com/apps/pubs/default.aspx?id=79775">here</a>). We are grateful to CV Jawahar for helpful discussions.
+    </P>
+    <P> We thank the <a
+	    href="http://www.ee.surrey.ac.uk/CVSSP/">CVSSP/Surrey</a>
+	  for hosting this web page. T de Campos also thanks <a
+	    href="http://www.xrce.xerox.com/">Xerox RCE</a> for
+	  the support while he finalized the paper.
+    </P>
+</small>
+<hr>
+    Main contact: <a href="https://teodecampos.github.io">T.deCampos</a>
+<BR>
+<!-- Created: Mon May 11 22:26:33 RDT 2009 -->
+<!-- hhmts start -->
+Last modified: Mon Oct 15 10:47:12 BST 2012
+<!-- hhmts end -->
+</font>
+  </body>
+</html>
+
